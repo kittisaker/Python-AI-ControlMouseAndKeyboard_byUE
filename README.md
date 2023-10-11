@@ -1,8 +1,8 @@
 # Advance Mouse and Keyboard Control
 ## Select each branch to read the lesson.
 
-* Chapter-1 : The Screen and Mouse Position 
-* Chapter-2 : Mouse Movement 
+* Chapter-1 : The Screen and Mouse Position
+* Chapter-2 : Mouse Movement
 * Chapter-3 : Mouse Drags
 * Chapter-4 : Mouse Clicks
 * Chapter-5 : Mouse Down and Mouse Up

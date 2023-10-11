@@ -1,24 +1,56 @@
-# Advance Mouse and Keyboard Control
-## Select each branch to read the lesson.
+# Advance Mouse and Keyboard Control : Chapter-1 The Screen and Mouse Position
 
-* Chapter-1 : The Screen and Mouse Position
-* Chapter-2 : Mouse Movement
-* Chapter-3 : Mouse Drags
-* Chapter-4 : Mouse Clicks
-* Chapter-5 : Mouse Down and Mouse Up
-* Chapter-6 : Mouse Scrolling
-* Chapter-7 : typewrite (Eng Text)
-* Chapter-8 : typewrite (Thai Text)
-* Chapter-9 : press, keyDown, and keyUp
-* Chapter-10 : Mouse Hold
-* Chapter-11 : hotkey
-* Chapter-12 : screenshot
-* Chapter-13 : locate and screenshot
-* Chapter-14 : mouse movement with template
-* Chapter-15 : opencv and template matching
-* Chapter-16 : Grayscale Mathcing
-* Chapter-17 : Pixel Matching
-* Chapter-18 : Popup Alert
-* Chapter-19 : CMD Prompt
-* Chapter-20 : GUI Menu
+## Setup Enviroment
+### install PyAutoGUI
+```shell
+pip install PyAutoGUI
+```
+
+### install pynput
+```shell
+pip install pynput
+```
+
+### PyAutoGUI : size()
+```python
+import pyautogui
+
+print(pyautogui.size()) # Size(width=1920, height=1080)
+```
+
+### PyAutoGUI : position()
+
+```python
+import pyautogui
+
+print(pyautogui.position())
+# Point(x=0, y=0)
+# Point(x=1849, y=1045)
+```
+
+### PyAutoGUI : moveTo(x, y)
+```python
+import pyautogui
+
+pyautogui.moveTo(0, 0)
+```
+
+### PyAutoGUI : click()
+```python
+import pyautogui
+
+pyautogui.moveTo(1826, 1047)
+pyautogui.click()
+```
+
+```python
+import pyautogui as pg
+import time
+
+time.sleep(3)
+
+# pg.moveTo(1826, 1047)
+pg.click(1826, 1047)
+```
+
 ---

@@ -11,14 +11,14 @@ pip install PyAutoGUI
 pip install pynput
 ```
 
-### PyAutoGUI : size()
+### Screen Size
 ```python
 import pyautogui
 
 print(pyautogui.size()) # Size(width=1920, height=1080)
 ```
 
-### PyAutoGUI : position()
+### Mouse Position
 
 ```python
 import pyautogui
@@ -28,14 +28,14 @@ print(pyautogui.position())
 # Point(x=1849, y=1045)
 ```
 
-### PyAutoGUI : moveTo(x, y)
+### Mouse Move
 ```python
 import pyautogui
 
 pyautogui.moveTo(0, 0)
 ```
 
-### PyAutoGUI : click()
+### Mouse Click
 ```python
 import pyautogui
 

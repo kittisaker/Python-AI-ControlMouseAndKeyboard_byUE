@@ -1,110 +1,51 @@
-# Advance Mouse and Keyboard Control : Chapter-2
+# Advance Mouse and Keyboard Control : Chapter-3
 
-## Basic function
-```python
-def hello():
-    print("Hello")
-
-
-hello()
-```
-
-### function with for loop
-```python
-for i in range(3):
-    print(i, 'hello')
-# 0 hello
-# 1 hello
-# 2 hello
-```
-
-```python
-def hello():
-    for i in range(1, 6):
-        print(i, 'hello')
-
-hello()
-# 1 hello
-# 2 hello
-# 3 hello
-# 4 hello
-# 5 hello
-```
-
-```python
-def hello(n):
-    for i in range(n):
-        print(i, 'hello')
-
-hello(2)
-# 0 hello
-# 1 hello
-```
-
-## Mouse and Keyboard function
+## Using paprerclip
 ```shell
-Open : Google
-Key : Keyword
-Press : enter
-Wait : 2 second
-Scroll : Down
-Stop : 2 second
-Continue : Scroll Down
-Repeat : 10
-Goto : Top
-Key : New keyword
-Scroll : down and repeat
+pip list
+Package      Version
+------------ -------
+...
+pyperclip    1.8.2
+...
+
 ```
 
+##
+
+```shell
+>python
+>>> import pyperclip
+>>> pyperclip.copy('Hello')
+
+>>> t = pyperclip.paste()
+>>> print(t)
+ใช่เหรอ ไม่ได้โม้ใช่ไหม
+
+```
+
+##
+
 ```python
-import webbrowser
-import pyautogui as pg
+import pyautogui
+import pyperclip
 import time
 
-def Search(keyword):
-    # Key : Keyword
-    # pg.write('thailand travel', interval=0.25)
-    pg.write(keyword)
+time.sleep(3)
 
-    # Press : enter
-    pg.press('enter')
+check = ''
 
-    # Wait : 2 second
+for i in range(10):
+    pyautogui.hotkey('ctrl', 'c')
+    result = pyperclip.paste()
+    print('---------------------', i, '---------------------')
+    # print(result)
+
+    if result != check:
+        print(result)
+        check = result
+
     time.sleep(2)
-
-    # Scroll : Down
-    # pg.moveTo(1000, 600)
-
-    for i in range(5):
-        # Stop : 2 second
-        # Continue : Scroll Down
-        # Repeat : 10
-        
-        # pg.scroll(-1000)
-
-        for i in range(5):
-            pg.press('down')
-
-        time.sleep(1)
-
-    # Goto : Top
-    # pyautogui.position()
-    # Point(x=693, y=236)
-    pg.press('home')
-    time.sleep(1)
-    pg.click(x=693, y=236)
-    pg.press('backspace', presses=50)
-
-# Open : Google
-url = 'https://www.google.com'
-webbrowser.open(url)
-time.sleep(2)
-
-Search('thailand travel')
-
-# Key : New keyword
-# Scroll : down and repeat
-Search('japan travel')
-Search('china travel')
-
 ```
+
+

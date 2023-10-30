@@ -1,24 +1,51 @@
-# Advance Mouse and Keyboard Control
-## Select each branch to read the lesson.
+# Advance Mouse and Keyboard Control : Chapter-3
 
-* Chapter-1 : The Screen and Mouse Position
-* Chapter-2 : Mouse Movement
-* Chapter-3 : Mouse Drags
-* Chapter-4 : Mouse Clicks
-* Chapter-5 : Mouse Down and Mouse Up
-* Chapter-6 : Mouse Scrolling
-* Chapter-7 : typewrite (Eng Text)
-* Chapter-8 : typewrite (Thai Text)
-* Chapter-9 : press, keyDown, and keyUp
-* Chapter-10 : Mouse Hold
-* Chapter-11 : hotkey
-* Chapter-12 : screenshot
-* Chapter-13 : locate and screenshot
-* Chapter-14 : mouse movement with template
-* Chapter-15 : opencv and template matching
-* Chapter-16 : Grayscale Mathcing
-* Chapter-17 : Pixel Matching
-* Chapter-18 : Popup Alert
-* Chapter-19 : CMD Prompt
-* Chapter-20 : GUI Menu
----
+## Using paprerclip
+```shell
+pip list
+Package      Version
+------------ -------
+...
+pyperclip    1.8.2
+...
+
+```
+
+##
+
+```shell
+>python
+>>> import pyperclip
+>>> pyperclip.copy('Hello')
+
+>>> t = pyperclip.paste()
+>>> print(t)
+ใช่เหรอ ไม่ได้โม้ใช่ไหม
+
+```
+
+##
+
+```python
+import pyautogui
+import pyperclip
+import time
+
+time.sleep(3)
+
+check = ''
+
+for i in range(10):
+    pyautogui.hotkey('ctrl', 'c')
+    result = pyperclip.paste()
+    print('---------------------', i, '---------------------')
+    # print(result)
+
+    if result != check:
+        print(result)
+        check = result
+
+    time.sleep(2)
+```
+
+
